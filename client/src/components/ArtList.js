@@ -1,9 +1,9 @@
 import React from "react";
 import ArtCard from "./ArtCard";
 
-export default function ArtList ({data}) {
+export default function ArtList ({arts}) {
 
-    const art=data.map((art)=>{
+    const art = arts.map((art)=>{
         return(
             <ArtCard 
             key={art.id}
@@ -15,7 +15,9 @@ export default function ArtList ({data}) {
     return(
         <div>
             <br/><br/>
-            {art}
+            <div className="artContainer">
+               {art}
+            </div>
         </div>
     )
 }

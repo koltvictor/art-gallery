@@ -37,6 +37,11 @@
   }
 }
 
+.headerWrapper {
+  background-color: rgb(236, 231, 231);
+  padding-top: 10px;
+}
+
 .header{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
@@ -81,21 +86,41 @@
 }
 
 .navBar {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: 500;
   color: black;
+  background-color: rgb(236, 231, 231);
   padding: 1em;
   border-bottom: solid black;
+  border-top: solid black;
   display: flex;
   justify-content: space-around;
   padding-bottom: 1rem;
   color: black;
   text-decoration: underline;
   margin-left: -30rem;
+
+  /* background-color: white;
+  position: fixed;
+  display: flex;
+  align-items: center; */
 }
 
+.navBar * {
+  display: inline;
+
+}
+
+.homeNav:hover {
+  background-color: rgb(175, 166, 166);
+  text-decoration: none;
+  color:white;
+}
+
+
+
 .home{
-  background-image: url("http://ambientartprojects.com/Looking%20Up%20show/Looking%20Up%20install%20looking%20east.jpg");
+  background-image: url("http://ambientartprojects.com/Looking%20Up%20show/Milstein%20install.jpg");
   min-height: 700px;
   background-attachment: fixed;
   background-position: center;
@@ -110,6 +135,11 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: lighter;
   border-top: solid black;
+  text-align: center;
+}
+
+.artContainer{
+  padding-top: 20px;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -166,4 +196,36 @@
 
 .artImage{
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.aboutWrapper {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  padding-top: 10px;
+  margin-right: 50rem;
+  margin-left: 50rem;
+}
+
+.aboutInfo {
+  background-image: url('https://wallpapersmug.com/large/df5390/bw-optical-illusion-art.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: -1rem;
+  color: white;
+  text-shadow: rgb(0, 0, 0) 0 0 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.contactForm {
+  background-image: url('https://swall.teahub.io/photos/small/12-124998_free-download-3d-background-id-backgrounds-full-hd.jpg');
+  background-size: cover;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 2rem;
+  margin-right: 20rem;
+  margin-left: 20rem;
 }

@@ -9,7 +9,7 @@ export default function ArtCard({art}) {
                     <h3>{art.title}</h3>
                     <h4>{art.artist}</h4>
                 </div>
-                <div className="flip-card-back">
+                <div className="flip-card-back"><br/><br/><br/>
                     <h5>medium: {art.medium}</h5>
                     <h5></h5>
                     <h6>Image dimensions: {art.image_height}"h x {art.image_width}"w</h6>

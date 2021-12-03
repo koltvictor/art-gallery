@@ -1,34 +1,50 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import './App.css';
 import ArtList from "./components/ArtList";
+import Search from "./components/Search";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Contact from "./components/Contact";
+import About from "./components/About";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [arts, setArts] = useState([]);
+  
 
   useEffect(() => {
     fetch("api/arts")
       .then((r) => r.json())
-      .then((data) => setData(data));
+      .then(setArts);
   }, []);
 
   return (
     <div>
-      <Header />
+      <div className="headerWrapper">
+        <Header />
+      </div>
         <Switch>
           <Route exact path="/arts">
+            <br/>
+            <Search 
+              arts={arts}
+            />
             <ArtList
-            data={data}
+            arts={arts}
             />
           </Route>
-          <Route path="/">
-              <Home />
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
           </Route>
         </Switch>
     </div>
-  );
+  )
 }
 
 export default App;
