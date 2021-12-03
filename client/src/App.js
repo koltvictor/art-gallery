@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 
 function App() {
-  const [searchArt, setSearchArt] = useState('')
+  // const [searchArt, setSearchArt] = useState('')
   const [arts, setArts] = useState([]);
   
 
