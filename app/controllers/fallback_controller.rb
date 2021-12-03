@@ -1,6 +1,6 @@
 class FallbackController < ActionController::Base
 
     def index
-      render file: 'public/index.html'
+      render file: 'src/app.js'
     end
   end
