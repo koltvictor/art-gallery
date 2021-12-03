@@ -1,28 +1,33 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css';
+import ArtList from "./components/ArtList";
+import Header from "./components/Header";
+import Home from "./components/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/hello")
+    fetch("api/arts")
       .then((r) => r.json())
-      .then((data) => setCount(data.count));
+      .then((data) => setData(data));
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="App">
+    <div>
+      <Header />
         <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
+          <Route exact path="/arts">
+            <ArtList
+            data={data}
+            />
           </Route>
           <Route path="/">
-            <h1>Page Count: {count}</h1>
+              <Home />
           </Route>
         </Switch>
-      </div>
-    </BrowserRouter>
+    </div>
   );
 }
 

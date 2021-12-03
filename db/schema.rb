@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_03_004133) do
+ActiveRecord::Schema.define(version: 2021_12_03_021031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2021_12_03_004133) do
     t.boolean "signed"
     t.boolean "rented"
     t.string "image"
-    t.integer "image_height"
-    t.integer "image_width"
-    t.integer "frame_height"
-    t.integer "frame_width"
+    t.decimal "image_height"
+    t.decimal "image_width"
+    t.decimal "frame_height"
+    t.decimal "frame_width"
     t.string "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

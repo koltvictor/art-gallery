@@ -10,10 +10,10 @@ class CreateArts < ActiveRecord::Migration[6.1]
       t.boolean :signed
       t.boolean :rented
       t.string :image
-      t.integer :image_height
-      t.integer :image_width
-      t.integer :frame_height
-      t.integer :frame_width
+      t.decimal :image_height
+      t.decimal :image_width
+      t.decimal :frame_height
+      t.decimal :frame_width
       t.string :notes
 
       t.timestamps
