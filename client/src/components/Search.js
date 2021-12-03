@@ -1,19 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
-export default function Search ({arts}) {
-
-    const [searchArt, setSearchArt] = useState('');
-
-      function handleSearch(e) {
-            setSearchArt(e.target.value);
-        }
-
-//   let displayedArts = arts.filter(art => {
-//     // console.log(art.artist.toLowerCase());
-//     return art.artist.toLowerCase().includes(searchArt.toLowerCase()) ||
-//       art.title.toLowerCase().includes(searchArt.toLowerCase())
-//   })
-
+export default function Search ({searchArt, handleSearch}) {
 
     return (
         <div>

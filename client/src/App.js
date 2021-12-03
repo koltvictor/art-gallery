@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 
 function App() {
+  const [searchArt, setSearchArt] = useState('')
   const [arts, setArts] = useState([]);
   
 
@@ -17,6 +18,16 @@ function App() {
       .then((r) => r.json())
       .then(setArts);
   }, []);
+
+  console.log(arts.map((art) => art.title))
+
+  // function handleSearch(e) { 
+  //   setSearchArt(e.target.value);
+  // }
+
+  // const displayedArts = arts.filter(art => {
+  //   return art.artist.toLowerCase().includes(searchArt.toLowerCase()) || art.title.toLowerCase().includes(searchArt.toLowerCase())
+  // })
 
   return (
     <div>
@@ -27,10 +38,11 @@ function App() {
           <Route exact path="/arts">
             <br/>
             <Search 
-              arts={arts}
+              // searchArt={searchArt}
+              // handleSearch={handleSearch}
             />
             <ArtList
-            arts={arts}
+              arts={arts}
             />
           </Route>
           <Route exact path="/">
