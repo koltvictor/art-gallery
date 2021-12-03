@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
   namespace :api do
-    resources :users
-    resources :arts, only: [:index, :show, :create]
+    
     get '/arts', to: 'arts#index'
-  end
+    
+    resources :users, only: [:index, :create, :show, :update, :destroy]
+    resources :arts, only: [:index, :show, :create]
 
+  end
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

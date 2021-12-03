@@ -1,5 +1,5 @@
 class Api::ArtsController < ApplicationController
-    before_action :set_art, only: [:show, :update, :destroy]
+    # before_action :set_art, only: [:show, :update, :destroy]
     
     def index
         @arts = Art.all
