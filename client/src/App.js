@@ -19,7 +19,9 @@ function App() {
       .then(setArts);
   }, []);
 
-  console.log(arts.map((art) => art.title))
+  console.log(arts)
+
+  // console.log(arts.map((art) => art.title))
 
   // function handleSearch(e) { 
   //   setSearchArt(e.target.value);
