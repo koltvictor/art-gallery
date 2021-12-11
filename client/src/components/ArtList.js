@@ -2,7 +2,6 @@ import React from "react";
 import ArtCard from "./ArtCard";
 
 export default function ArtList ({arts}) {
-
     const art = arts.map((art)=>{
         return(
             <ArtCard 
@@ -12,6 +11,7 @@ export default function ArtList ({arts}) {
         )
     }
 )
+
     return(
         <div>
             <br/><br/>

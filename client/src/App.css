@@ -117,7 +117,23 @@
   color:white;
 }
 
+.galleryNav:hover {
+  background-color: rgb(175, 166, 166);
+  text-decoration: none;
+  color:white;
+}
 
+.aboutNav:hover {
+  background-color: rgb(175, 166, 166);
+  text-decoration: none;
+  color:white;
+}
+
+.contactNav:hover {
+  background-color: rgb(175, 166, 166);
+  text-decoration: none;
+  color:white;
+}
 
 .home{
   background-image: url("http://ambientartprojects.com/Looking%20Up%20show/Milstein%20install.jpg");
@@ -140,6 +156,10 @@
 
 .artContainer{
   padding-top: 20px;
+  text-align: center;
+}
+
+.search {
   text-align: center;
 }
 
@@ -202,8 +222,8 @@
 .aboutWrapper {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
   padding-top: 10px;
-  margin-right: 50rem;
-  margin-left: 50rem;
+  margin-right: 30rem;
+  margin-left: 30rem;
 }
 
 .aboutInfo {
